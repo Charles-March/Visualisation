@@ -18,11 +18,8 @@ public class Decomposition {
 	public static float[] algo (float[] data_in, int rank, int left){
 		int size_of_data = data_in.length;
 		float[] data_out = new float[size_of_data];
-		data_out = data_in;
+		data_out = data_in.clone();
 		// composition de la premiere partie des données
-		System.out.println(size_of_data);
-		System.out.println("rank est " + rank);
-		System.out.println("rank" + size_of_data/(2*rank));
 		for(int i=0; i < (size_of_data/(2*rank)); i++){
 			data_out[i] = (float) 0.5*(data_in[2*i] + data_in[2*i+1]);
 		}
