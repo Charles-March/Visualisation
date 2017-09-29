@@ -4,9 +4,9 @@ import java.util.LinkedList;
 
 public class Reconstruction {
 
-	public static void reconstruit(float[] T){
-		if(T==null) return ;
-		if(T.length == 1 ) return ;
+	public static float[] reconstruit(float[] T){
+		if(T==null) return null;
+		if(T.length == 1 ) return null;
 		
 		printT(T);
 		System.out.println("------------");
@@ -31,8 +31,9 @@ public class Reconstruction {
 			}
 			T1=T2.clone();
 		}
-		
 		printT(T1);
+		return T1;
+		
 	}
 	
 	public static void reconstruitD(float[] T,int details){
