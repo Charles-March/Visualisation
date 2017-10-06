@@ -19,7 +19,7 @@ public class Main {
 			System.out.println("dataset " + i + " : " + dataset[i]);
 		}
 		
-		float[] data_out = Decomposition.decomposition(dataset, "full", 2);
+		float[] data_out = Decomposition.decomposition(dataset, "2.0", 2);
 		
 		for(int i=0; i < data_out.length; i++){
 			System.out.println("data_out " + i + " : " + data_out[i]);
