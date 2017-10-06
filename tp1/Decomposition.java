@@ -2,24 +2,26 @@ package tp1;
 
 public class Decomposition {
 
-	public static float[] decomposition(float[] data_in, String arg, int left){
-		float[] data_out = new float[data_in.length];
+	public static double[] decomposition(double[] data_in, String arg, int left){
+		double[] data_out = new double[data_in.length];
 		switch (arg){
 			case "one":
 				data_out = algo(data_in, 1, left, (float) 0.0);
 				break;
 			case "all":
 				data_out = algo(data_in, 1, left, (float) 0.0);
+				break;
 			default:
 				data_out = algo(data_in, 1, left, Float.parseFloat(arg));
+				break;
 		}
 				
 		return data_out;
 	}
 	
-	public static float[] algo (float[] data_in, int rank, int left, float floor){
+	public static double[] algo (double[] data_in, int rank, int left, float floor){
 		int size_of_data = data_in.length;
-		float[] data_out = new float[size_of_data];
+		double[] data_out = new double[size_of_data];
 		data_out = data_in.clone();
 		// composition de la premiere partie des données
 		for(int i=0; i < (size_of_data/(2*rank)); i++){
